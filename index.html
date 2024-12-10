@@ -1,0 +1,186 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Konser Ticket</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+</head>
+<body class="font-roboto bg-gray-100">
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Pembelian Tiket Konser</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:underline" href="#">Home</a></li>
+                    <li><a class="hover:underline" href="#">Concerts</a></li>
+                    <li><a class="hover:underline" href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto p-4">
+        <section class="mb-8">
+            <h2 class="text-3xl font-bold mb-4">Akan Datang</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Concert image with a band performing on stage with colorful lights" height="200" src="https://storage.googleapis.com/a1aa/image/OtsffTvOqGuYnkvFoHrPxsmeO89wNzRRzll8MTfxtiCOjTjPB.jpg" width="300"/>
+                    <h3 class="text-xl font-bold mt-2">HINDIA</h3>
+                    <p class="mt-1">
+                        Hindia adalah sebuah proyek musik Indonesia yang diprakarsai oleh Ari Lesmana. Band ini terkenal dengan musik indie rock dan lirik yang puitis. Mereka memiliki beberapa album populer dan mendapatkan apresiasi di kancah musik Indonesia, terutama di kalangan anak muda. Beberapa lagu terkenal mereka antara lain "Secukupnya", "Besok Masih Ada", dan "Masih Adakah".
+                    </p>
+                    <p class="mt-2 font-bold text-lg">Harga: Rp 100.000</p>
+                    <div class="mt-4 flex justify-between">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded" onclick="showConcertInfo('HINDIA', '01 JANUARI 2025', 'PARKIRAN DOM AMIKOM', '19:00', 'DILARANG MEMBAWA SENJATA TAJAM,MEMBUAT KERIBUTAN,MEMBAWA KAMERA PROFESSIONAL,MEMBAWA MAKAN/MINUM DARI LUAR.')">Info Konser</button>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded" onclick="buyTicket('HINDIA', 100000)">Beli Tiket</button>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Concert image with a solo artist singing on stage with a spotlight" height="200" src="https://storage.googleapis.com/a1aa/image/EjO5cVBF5SZZLlajSKWUJkVB1PXwyt7sCw4vLAaXM6aNONeJA.jpg" width="300"/>
+                    <h3 class="text-xl font-bold mt-2">BERNADYA</h3>
+                    <p class="mt-1">
+                        Bernadya adalah seorang penyanyi Indonesia yang cukup dikenal. Dia memiliki karier di dunia musik pop Indonesia. Namun, informasi lebih detail tentang kariernya membutuhkan penelusuran lebih lanjut.
+                    </p>
+                    <p class="mt-2 font-bold text-lg">Harga: Rp 150.000</p>
+                    <div class="mt-4 flex justify-between">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded" onclick="showConcertInfo('BERNADYA', '05 DESEMBER 2025', 'PARKIRAN PADANG MAHSYAR', '20:00', 'DILARANG MEMBAWA SENJATA TAJAM,MEMBUAT KERIBUTAN,MEMBAWA KAMERA PROFESSIONAL,MEMBAWA MAKAN/MINUM DARI LUAR.')">Info Konser</button>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded" onclick="buyTicket('BERNADYA', 150000)">Beli Tiket</button>
+                    </div>
+                </div>
+                <div class="bg-white p-4 rounded shadow">
+                    <img alt="Concert image with a large crowd enjoying the performance with fireworks in the background" height="200" src="https://storage.googleapis.com/a1aa/image/UDdZOepHaaw8QicUT65yM9c6wtc82QXI2y76MfXmLdM2404TA.jpg" width="300"/>
+                    <h3 class="text-xl font-bold mt-2">DENNY CAKNAN</h3>
+                    <p class="mt-1">
+                        Denny Caknan adalah seorang penyanyi dangdut asal Jawa yang belakangan ini cukup populer. Dia dikenal dengan lagu-lagu bernuansa Jawa dan gaya musiknya yang khas. Beberapa lagu hits-nya termasuk "Bapak Kepala Desa", "Sego Kucing", dan "Sambel Gobyos". Denny Caknan meraih popularitas melalui media sosial dan lagu-lagu yang bernuansa humor dan kedaerahan.
+                    </p>
+                    <p class="mt-2 font-bold text-lg">Harga: Rp 120.000</p>
+                    <div class="mt-4 flex justify-between">
+                        <button class="bg-blue-600 text-white px-4 py-2 rounded" onclick="showConcertInfo('DENNY CAKNAN', '10 DESEMBER 2025', 'PARKIRAN DOM BAWAH AMIKOM', '18:00', 'DILARANG MEMBAWA SENJATA TAJAM,MEMBUAT KERIBUTAN,MEMBAWA KAMERA PROFESSIONAL,MEMBAWA MAKAN/MINUM DARI LUAR.')">Info Konser</button>
+                        <button class="bg-green-600 text-white px-4 py-2 rounded" onclick="buyTicket('DENNY CAKNAN', 120000)">Beli Tiket</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" id="concert-info-modal">
+        <div class="bg-white p-6 rounded shadow-lg w-11/12 md:w-1/2">
+            <h3 class="text-2xl font-bold mb-4" id="concert-title"></h3>
+            <p class="mb-2" id="concert-date"></p>
+            <p class="mb-2" id="concert-location"></p>
+            <p class="mb-2" id="concert-time"></p>
+            <p class="mb-4" id="concert-rules"></p>
+            <button class="bg-red-600 text-white px-4 py-2 rounded" onclick="closeModal('concert-info-modal')">Close</button>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" id="ticket-purchase-modal">
+        <div class="bg-white p-6 rounded shadow-lg w-11/12 md:w-1/2">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold" id="purchase-concert-title"></h3>
+                <button class="text-red-600 text-2xl" onclick="closeModal('ticket-purchase-modal')">&times;</button>
+            </div>
+            <form id="ticket-form">
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="name">Nama</label>
+                    <input class="w-full p-2 border rounded" id="name" required="" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="phone">Nomor Hp</label>
+                    <input class="w-full p-2 border rounded" id="phone" required="" type="text"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="email">Email</label>
+                    <input class="w-full p-2 border rounded" id="email" required="" type="email"/>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="gender">Jenis Kelamin</label>
+                    <select class="w-full p-2 border rounded" id="gender" required="">
+                        <option value="male">Cowok</option>
+                        <option value="female">Cewek</option>
+                        <option value="other">Tidak Tau</option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label class="block text-gray-700" for="ticket-quantity">Ticket Quantity</label>
+                    <div class="flex items-center">
+                        <button class="bg-gray-300 px-2 py-1 rounded-l" onclick="updateTicketQuantity(-1)" type="button">-</button>
+                        <input class="w-16 text-center border-t border-b" id="ticket-quantity" min="1" readonly="" type="number" value="1"/>
+                        <button class="bg-gray-300 px-2 py-1 rounded-r" onclick="updateTicketQuantity(1)" type="button">+</button>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <p class="text-gray-700">Total Price: Rp <span id="total-price">Rp 100.000</span>
+                </div>
+                <button class="bg-green-600 text-white px-4 py-2 rounded" onclick="showQRCode()" type="button">Bayar</button>
+                <p class="text-red-600 mt-4">*Harap mengisi identitas terlebih dahulu sebelum melakukan pembayaran.</p>
+            </form>
+        </div>
+    </div>
+    <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden" id="qr-code-modal">
+        <div class="bg-white p-6 rounded shadow-lg w-11/12 md:w-1/2 text-center">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-2xl font-bold">Scan QR Code Untuk Pembayaran</h3>
+                <button class="text-red-600 text-2xl" onclick="closeModal('qr-code-modal')">&times;</button>
+            </div>
+            <img alt="QR code for payment" height="200" src="qr pembayaran.jpg" width="200"/>
+            <p class="mt-4">Setelah pembayaran,DIHARUSKAN KONFIRMASI PADA NOMOR WHATSAPP BERIKUT:</p>
+            <a class="bg-green-600 text-white px-4 py-2 rounded mt-2 inline-block" href="https://wa.me/6287734237040">Konfirmasi Melalui WhatsApp</a>
+        </div>
+    </div>
+    <script>
+        let ticketPrice = 0;
+
+        function showConcertInfo(title, date, location, time, rules) {
+            document.getElementById('concert-title').innerText = title;
+            document.getElementById('concert-date').innerText = `Date: ${date}`;
+            document.getElementById('concert-location').innerText = `Location: ${location}`;
+            document.getElementById('concert-time').innerText = `Time: ${time}`;
+            document.getElementById('concert-rules').innerText = `Rules: ${rules}`;
+            document.getElementById('concert-info-modal').classList.remove('hidden');
+        }
+
+        function buyTicket(title, price) {
+            document.getElementById('purchase-concert-title').innerText = title;
+            ticketPrice = price;
+            updateTotalPrice();
+            document.getElementById('ticket-purchase-modal').classList.remove('hidden');
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+        function updateTicketQuantity(change) {
+            const quantityInput = document.getElementById('ticket-quantity');
+            let quantity = parseInt(quantityInput.value);
+            quantity = Math.max(1, quantity + change);
+            quantityInput.value = quantity;
+            updateTotalPrice();
+        }
+
+        function updateTotalPrice() {
+            const quantity = parseInt(document.getElementById('ticket-quantity').value);
+            const totalPrice = ticketPrice * quantity;
+            document.getElementById('total-price').innerText = formatRupiah(totalPrice);
+        }
+
+        function formatRupiah(amount) {
+            return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function showQRCode() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const gender = document.getElementById('gender').value;
+
+            if (name && phone && email && gender) {
+                document.getElementById('ticket-purchase-modal').classList.add('hidden');
+                document.getElementById('qr-code-modal').classList.remove('hidden');
+            } else {
+                alert('Harap mengisi identitas terlebih dahulu sebelum melakukan pembayaran.');
+            }
+        }
+    </script>
+</body>
+</html>
